@@ -1,11 +1,10 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-(setq user-full-name "Ivan Kryvoruchko"
-      user-mail-address "gsnewmark@pm.me")
+(setq user-full-name "Dmytro Morozov")
 
 ;; UI
 
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-nord-light)
 
 (setq doom-font (font-spec :family "Iosevka" :size 12.0)
       doom-variable-pitch-font (font-spec :family "Source Sans Pro"))
@@ -23,7 +22,7 @@
 
 ;; Org Mode
 
-(setq org-directory "~/Dropbox/org")
+(setq org-directory "~/Sync/org")
 (setq org-roam-directory (concat org-directory "/notes"))
 (setq deft-directory org-roam-directory)
 

@@ -4,8 +4,7 @@
        (company          ; the ultimate code completion backend
         +childframe)
        (ivy              ; a search engine for love and life
-        +childframe
-        +icons)
+        +childframe)
 
        :ui
        deft              ; notational velocity for Emacs
@@ -35,7 +34,7 @@
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
-       (format +onsave)  ; automated prettiness
+       ;; (format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
        rotate-text       ; cycle region at point between text candidates
@@ -68,6 +67,7 @@
         +dictionary
         +offline)
        magit             ; a git porcelain for Emacs
+       lsp
 
        :os
        tty               ; improve the terminal Emacs experience
