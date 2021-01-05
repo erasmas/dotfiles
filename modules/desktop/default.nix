@@ -61,6 +61,9 @@
     mediainfo
     poppler
     w3m
+    
+    # Clipboard manager
+    haskellPackages.greenclip
   ];
 
   networking.networkmanager.enable = true;
