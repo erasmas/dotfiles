@@ -3,8 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     # audio
-    audacity
-    audio-recorder
+    # audacity
+    # audio-recorder
 
     # video/stream
     obs-studio

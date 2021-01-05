@@ -1,5 +1,7 @@
 # My dotfiles
 
+Based on dotfiles by [gsnewmark](https://github.com/gsnewmark/dotfiles).
+
 A set of [NixOS](https://nixos.org/)-based system definitions & configuration
 files for Emacs ([Doom
 Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
@@ -45,7 +47,7 @@ Checkout dotfiles without sub-modules for the initial installation:
 ``` shell
 sudo nix-env -iA nixos.git
 cd /mnt/etc
-sudo git clone -b nixos https://github.com/gsnewmark/dotfiles.git
+sudo git clone -b nixos https://github.com/erasmas/dotfiles.git
 ```
 
 Generate default config to check the hardware config and adjust the one in
@@ -58,7 +60,7 @@ sudo nixos-generate-config --root /mnt
 Install the system:
 
 ``` shell
-sudo ./mnt/etc/dotfiles/deploy <orithena/hyperion>
+sudo ./mnt/etc/dotfiles/deploy <voyager>
 ```
 
 ### Post-installation cleanup
@@ -67,7 +69,7 @@ Chroot and set password for the created user:
 
 ``` shell
 sudo nixos-enter
-passwd gsnewmark
+passwd erasmas
 ```
 
 Actually check out dotfiles _for the created user_ and link them to the system's
@@ -75,10 +77,10 @@ Actually check out dotfiles _for the created user_ and link them to the system's
 
 ``` shell
 cd ~
-git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
+git clone -b nixos --recursive git@github.com:erasmas/dotfiles.git .dotfiles
 cp /etc/dotfiles/hardware-configuration.<host>.nix dotfiles/hosts/<host>/hardware-configuration.nix
 sudo rm -rf /etc/dotfiles
-sudo ln -s /home/gsnewmark/.dotfiles /etc/dotfiles
+sudo ln -s /home/erasmas/.dotfiles /etc/dotfiles
 ```
 
 ### Linking dotfiles
@@ -87,13 +89,13 @@ I use [GNU Stow](https://www.gnu.org/software/stow/) to manage the dotfiles:
 
 ```shell
 mkdir -p ~/{bin,.config}
-stow --target=/home/gsnewmark/bin bin
-stow --dir=config --target=/home/gsnewmark browser
-stow --dir=config --target=/home/gsnewmark desktop
-stow --dir=config --target=/home/gsnewmark dev
-stow --dir=config --target=/home/gsnewmark emacs
-stow --dir=config --target=/home/gsnewmark music
-stow --dir=config --target=/home/gsnewmark shell
+stow --target=/home/erasmas/bin bin
+stow --dir=config --target=/home/erasmas browser
+stow --dir=config --target=/home/erasmas desktop
+stow --dir=config --target=/home/erasmas dev
+stow --dir=config --target=/home/erasmas emacs
+stow --dir=config --target=/home/erasmas music
+stow --dir=config --target=/home/erasmas shell
 
 # TODO fisher
 ```
@@ -103,13 +105,13 @@ stow --dir=config --target=/home/gsnewmark shell
 To remove a particular configuration module use stow's `-D` option:
 
 ``` shell
-stow --target=/home/gsnewmark/bin -D bin
-stow --dir=config --target=/home/gsnewmark -D browser
-stow --dir=config --target=/home/gsnewmark -D desktop
-stow --dir=config --target=/home/gsnewmark -D dev
-stow --dir=config --target=/home/gsnewmark -D emacs
-stow --dir=config --target=/home/gsnewmark -D music
-stow --dir=config --target=/home/gsnewmark -D shell
+stow --target=/home/erasmas/bin -D bin
+stow --dir=config --target=/home/erasmas -D browser
+stow --dir=config --target=/home/erasmas -D desktop
+stow --dir=config --target=/home/erasmas -D dev
+stow --dir=config --target=/home/erasmas -D emacs
+stow --dir=config --target=/home/erasmas -D music
+stow --dir=config --target=/home/erasmas -D shell
 ```
 
 ## License

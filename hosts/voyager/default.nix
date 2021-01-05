@@ -1,4 +1,4 @@
-# orithena - my laptop
+# voyager - my ThinkPad laptop
 
 { pkgs, ... }:
 
@@ -13,23 +13,22 @@
     # Applications
     ../../modules/browser.nix
     ../../modules/chat.nix
-    ../../modules/daw.nix
+    # ../../modules/daw.nix
     ../../modules/dev.nix
     ../../modules/emacs.nix
-    ../../modules/gaming.nix
-    ../../modules/graphics.nix
+    # ../../modules/gaming.nix
+    # ../../modules/graphics.nix
     ../../modules/music.nix
     ../../modules/recording.nix
     ../../modules/shell/fish.nix
     ../../modules/vm.nix
 
     # Additional services
-    ../../modules/services/dropbox.nix
     ../../modules/services/fwupd.nix
     ../../modules/services/tlp.nix
   ];
 
-  networking.hostName = "orithena";
+  networking.hostName = "voyager";
 
   # Fix X freezing
   boot.kernelParams = [
@@ -37,10 +36,10 @@
     "acpi_rev_override=1"
     "iommu=soft"
     "idle=nomwait"
-    "nouveau.modeset=0"
-    "nouveau.runpm=0"
+    # "nouveau.modeset=0"
+    # "nouveau.runpm=0"
   ];
-  boot.blacklistedKernelModules = [ "nouveau" ];
+  # boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Update CPU microcode
   hardware.cpu.intel.updateMicrocode = true;

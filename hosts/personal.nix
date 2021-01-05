@@ -71,10 +71,13 @@
 
   services.xserver = {
     layout = "us, ua";
-    xkbOptions = "ctrl:nocaps, grp:shifts_toggle";
+    xkbOptions = "ctrl:nocaps, grp:alt_space_toggle";
+    libinput.enable = true;
+    autoRepeatDelay = 300;
+    autoRepeatInterval = 25;
   };
 
-  users.users.gsnewmark = {
+  users.users.erasmas = {
     isNormalUser = true;
     uid = 1000;
     extraGroups = [ "wheel" "video" ];
@@ -87,5 +90,5 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "20.03"; # Did you read the comment?
+  system.stateVersion = "20.09"; # Did you read the comment?
 }

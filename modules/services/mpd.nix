@@ -1,7 +1,7 @@
 {
   services.mpd = {
     enable = true;
-    user = "gsnewmark";
+    user = "erasmas";
     group = "users";
     startWhenNeeded = true;
     extraConfig = ''

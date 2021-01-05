@@ -64,7 +64,7 @@
   ];
 
   networking.networkmanager.enable = true;
-  users.users.gsnewmark.extraGroups = [ "networkmanager" ];
+  users.users.erasmas.extraGroups = [ "networkmanager" ];
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;

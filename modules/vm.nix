@@ -6,5 +6,5 @@
     docker-compose
   ];
 
-  users.users.gsnewmark.extraGroups = [ "docker" ];
+  users.users.erasmas.extraGroups = [ "docker" ];
 }
