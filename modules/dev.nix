@@ -42,5 +42,8 @@
 
     # Postgres
     pgcli
+
+    # Git
+    gitAndTools.tig
   ];
 }
