@@ -38,11 +38,9 @@
 
     # web
     networkmanager-openvpn
-    thunderbird
+    gnome3.evolution
     transmission
     transmission-gtk
-    protonmail-bridge
-    protonvpn-cli
 
     # network
     mitmproxy
@@ -51,6 +49,7 @@
 
     # encryption
     truecrypt
+    keepassxc
 
     # ranger file manager
     ranger

@@ -26,6 +26,7 @@
     # Additional services
     ../../modules/services/fwupd.nix
     ../../modules/services/tlp.nix
+    ../../modules/services/syncthing.nix
   ];
 
   networking.hostName = "voyager";
@@ -36,21 +37,24 @@
     "acpi_rev_override=1"
     "iommu=soft"
     "idle=nomwait"
-    # "nouveau.modeset=0"
-    # "nouveau.runpm=0"
   ];
   # boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Update CPU microcode
   hardware.cpu.intel.updateMicrocode = true;
 
-  # Support dGPU & iGPU
   hardware.opengl.enable = true;
-  hardware.bumblebee.enable = true;
 
   # Optimize power use & add battery indicator
   environment.systemPackages = [ pkgs.acpi ];
-  powerManagement.enable = true;
+
+  # Power management
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = "powersave";
+    powertop.enable = true;
+  };
+  services.thermald.enable = true;
 
   # Monitor backlight control
   programs.light.enable = true;

@@ -67,11 +67,11 @@
     longitude = 30.5234;
   };
 
-  i18n.defaultLocale = "uk_UA.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver = {
     layout = "us, ua";
-    xkbOptions = "ctrl:nocaps, grp:alt_space_toggle";
+    xkbOptions = "ctrl:nocaps, grp:alt_shift_toggle";
     libinput.enable = true;
     autoRepeatDelay = 300;
     autoRepeatInterval = 25;

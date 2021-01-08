@@ -36,5 +36,5 @@
     enableSSHSupport = true;
   };
 
-  services.gnome3.chrome-gnome-shell.enable = true;
+  # services.gnome3.chrome-gnome-shell.enable = true;
 }
