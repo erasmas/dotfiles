@@ -71,7 +71,7 @@
 
   services.xserver = {
     layout = "us, ua";
-    xkbOptions = "ctrl:nocaps, grp:alt_shift_toggle";
+    xkbOptions = "ctrl:nocaps, grp:alt_space_toggle";
     libinput.enable = true;
     autoRepeatDelay = 300;
     autoRepeatInterval = 25;
