@@ -38,7 +38,6 @@
     "iommu=soft"
     "idle=nomwait"
   ];
-  # boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Update CPU microcode
   hardware.cpu.intel.updateMicrocode = true;

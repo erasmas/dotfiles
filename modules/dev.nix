@@ -39,6 +39,7 @@
     rlwrap
     shellcheck
     pv
+    rclone # for Google Drive
 
     # Postgres
     pgcli
