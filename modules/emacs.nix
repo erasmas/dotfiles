@@ -21,8 +21,6 @@
     languagetool
     nixfmt
     proselint
-    rustfmt
-    rustracer
     sqlite
     texlive.combined.scheme-medium
     wordnet

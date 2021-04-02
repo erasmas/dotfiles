@@ -37,6 +37,16 @@
       fsType = "vfat";
     };
 
+
+  fileSystems."/media/nfs/ds9/Downloads" = {
+    device = "192.168.1.100:/Downloads";
+    fsType = "nfs";
+    options = [ "x-systemd.idle-timeout=600"     # disconnects after 10 minutes (i.e. 600 seconds)
+                "x-systemd.automount" "noauto"   # mount on first access
+                "rw"
+             ]; 
+  };
+
   swapDevices = [ ];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";

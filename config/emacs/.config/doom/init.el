@@ -61,7 +61,7 @@
        :tools
        direnv
        docker
-       ein               ; tame Jupyter notebooks with emacs
+       ;; ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
        (lookup           ; helps you navigate your code and documentation
         +dictionary
@@ -74,6 +74,7 @@
 
        :lang
        (clojure          ; java with a lisp
+        +lsp
         +syntax-checker)
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
@@ -90,7 +91,7 @@
         +present         ; Emacs for presentations
         +roam)
        python            ; beautiful is better than ugly
-       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        scala             ; java, but good
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        web               ; the tubes

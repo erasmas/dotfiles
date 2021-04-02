@@ -17,6 +17,8 @@
     # terminal emulator
     alacritty
 
+    groff # required for formatted output in terminal
+
     # screen recorders
     flameshot
     peek
@@ -24,6 +26,7 @@
     # video player
     ffmpeg
     mpv
+    vlc
     youtube-dl
 
     # document viewers
@@ -39,8 +42,7 @@
     # web
     networkmanager-openvpn
     thunderbird
-    transmission
-    transmission-gtk
+    # transmission-gtk
 
     # network
     mitmproxy
@@ -63,6 +65,7 @@
     
     # Clipboard manager
     haskellPackages.greenclip
+
   ];
 
   networking.networkmanager.enable = true;
@@ -84,6 +87,10 @@
       };
     };
   };
+
+  boot.kernel.sysctl = {
+    "vm.max_map_count" = 262144;
+  };  
 
   services.gnome3.gnome-keyring.enable = true;
 
