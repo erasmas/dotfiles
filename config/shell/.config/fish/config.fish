@@ -4,11 +4,10 @@ set -gx TERM xterm-256color
 
 set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin $PATH
 
-set -l TE "emacs -nw"
+# set -l TE "emacs -nw"
+set -L TE "nvim"
 set -gx VISUAL emacs
 set -gx EDITOR $TE
-
-set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
 
 ## Aliases
 

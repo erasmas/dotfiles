@@ -16,6 +16,7 @@
     # ../../modules/daw.nix
     ../../modules/dev.nix
     ../../modules/emacs.nix
+    ../../modules/vim.nix
     # ../../modules/gaming.nix
     # ../../modules/graphics.nix
     ../../modules/music.nix
