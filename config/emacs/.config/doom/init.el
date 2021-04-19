@@ -23,7 +23,8 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       treemacs          ; a project drawer, like neotree but cooler
+       (treemacs
+        +lsp)            ; a project drawer, like neotree but cooler
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
@@ -44,7 +45,7 @@
        :emacs
        (dired            ; making dired pretty [functional]
         +ranger          ; bringing the goodness of ranger to dired
-        +icons           ; colorful icons for dired-mode
+        ;+icons           ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
        (undo +tree)      ; persistent, smarter undo for your inevitable mistakes
@@ -92,7 +93,9 @@
         +roam)
        python            ; beautiful is better than ugly
        ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       scala             ; java, but good
+       ;; scala             ; java, but good
+       (fsharp
+        +lsp)
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        web               ; the tubes
        yaml              ; JSON, but readable
