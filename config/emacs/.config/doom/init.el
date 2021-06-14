@@ -23,8 +23,7 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       (treemacs
-        +lsp)            ; a project drawer, like neotree but cooler
+       (treemacs)            ; a project drawer, like neotree but cooler
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
@@ -75,12 +74,12 @@
 
        :lang
        (clojure          ; java with a lisp
-        +lsp
+        ;; +lsp
         +syntax-checker)
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
        go                ; the hipster dialect
-       (haskell +dante)  ; a language that's lazier than I am
+       (haskell +lsp)    ; a language that's lazier than I am
        json              ; At least it ain't XML
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
@@ -94,8 +93,7 @@
        python            ; beautiful is better than ugly
        ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
-       (fsharp
-        +lsp)
+       ;; (fsharp +lsp)
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        web               ; the tubes
        yaml              ; JSON, but readable

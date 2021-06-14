@@ -20,6 +20,10 @@
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; Projectile
+(setq projectile-project-search-path '("~/Work/Attendify" "~/Dev"))
+(setq projectile-auto-discover nil)
+
 ;; Org Mode
 
 (setq org-directory "~/Sync/org")
