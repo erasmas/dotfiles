@@ -27,7 +27,7 @@
 
     # Additional services
     ../../modules/services/fwupd.nix
-    ../../modules/services/tlp.nix
+    # ../../modules/services/tlp.nix
     ../../modules/services/syncthing.nix
   ];
 

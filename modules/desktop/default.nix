@@ -31,7 +31,7 @@
 
     # document viewers
     calibre
-    gnome3.eog
+    gnome.eog
     libreoffice-still
     zathura
     zotero
@@ -81,7 +81,7 @@
 
   hardware.bluetooth = {
     enable = true;
-    config = {
+    settings = {
       General = {
         Enable = "Source,Sink,Media,Socket";
       };
@@ -92,10 +92,10 @@
     "vm.max_map_count" = 262144;
   };  
 
-  services.gnome3.gnome-keyring.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     enableGhostscriptFonts = true;
 
     fonts = with pkgs; [

@@ -18,15 +18,14 @@
     jdk11
     maven
     visualvm
-    # TODO create package for the eclipse mat
 
     # Python
-    python37
-    python37Packages.black
-    python37Packages.pip
-    python37Packages.setuptools
-    python37Packages.virtualenv
-    python37Packages.virtualenvwrapper
+    python3
+    python3Packages.black
+    python3Packages.pip
+    python3Packages.setuptools
+    python3Packages.virtualenv
+    python3Packages.virtualenvwrapper
     tk
 
     # Scala

@@ -15,7 +15,7 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "gnome3";
+    pinentryFlavor = "gnome";
   };
 
   services = {
@@ -47,8 +47,8 @@
           betterlockscreen
           dunst
           feh
-          gnome3.cheese
-          gnome3.gnome-disk-utility
+          gnome.cheese
+          gnome.gnome-disk-utility
           gtk-engine-murrine
           i3blocks
           i3lock
