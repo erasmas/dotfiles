@@ -7,7 +7,6 @@ files for Emacs ([Doom
 Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
 shell](https://fishshell.com/),
 [Firefox](https://www.mozilla.org/en-US/firefox/new/)/[Tridactyl](https://github.com/tridactyl/tridactyl),
-Gnome-based [Material Shell](https://material-shell.com/),
 [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/), [ranger
 file manager](http://ranger.nongnu.org/),
 [alacritty](https://github.com/alacritty/alacritty),
