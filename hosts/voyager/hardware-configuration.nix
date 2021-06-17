@@ -9,7 +9,7 @@
       (let nixos-hardware =
              builtins.fetchTarball
                https://github.com/NixOS/nixos-hardware/archive/master.tar.gz;
-       in "${nixos-hardware}/lenovo/thinkpad/t480s")
+       in "${nixos-hardware}/lenovo/thinkpad/t480")
     ];
 
   boot.initrd.availableKernelModules = [ 
@@ -20,9 +20,9 @@
     "thinkpad_acpi"
   ];
 
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.kernelParams = [ "intel_pstate=disable" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [ "acpi_osi=Linux" "iommu=soft" ];
+
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
@@ -37,15 +37,6 @@
       fsType = "vfat";
     };
 
-
-  fileSystems."/media/nfs/ds9/Downloads" = {
-    device = "192.168.1.100:/Downloads";
-    fsType = "nfs";
-    options = [ "x-systemd.idle-timeout=600"     # disconnects after 10 minutes (i.e. 600 seconds)
-                "x-systemd.automount" "noauto"   # mount on first access
-                "rw"
-             ]; 
-  };
 
   swapDevices = [ ];
 
