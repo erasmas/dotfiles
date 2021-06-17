@@ -42,7 +42,7 @@
     # web
     networkmanager-openvpn
     thunderbird
-    # transmission-gtk
+    fractal # Matrix client
 
     # network
     mitmproxy
@@ -53,7 +53,6 @@
     truecrypt
     keepassxc
 
-    # ranger file manager
     ranger
     atool
     ffmpegthumbnailer
