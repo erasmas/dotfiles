@@ -6,7 +6,7 @@ set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin $PATH
 
 # set -l TE "emacs -nw"
 set -L TE "nvim"
-set -gx VISUAL emacs
+set -gx VISUAL $TE
 set -gx EDITOR $TE
 
 ## Aliases
