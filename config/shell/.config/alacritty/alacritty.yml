@@ -9,3 +9,10 @@ font:
 
 cursor:
   vi_mode_style: Underline
+
+shell:
+  program: bash
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
