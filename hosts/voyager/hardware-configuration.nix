@@ -40,5 +40,35 @@
 
   swapDevices = [ ];
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  services = {
+    thinkfan = {
+      enable = false;
+      sensors = [
+        { type = "hwmon";
+          query = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp3_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp4_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input";
+        }
+        { type = "hwmon";
+          query = "/sys/devices/virtual/thermal/thermal_zone6/hwmon7/temp1_input";
+        }
+      ];
+    };
+  };
 }
