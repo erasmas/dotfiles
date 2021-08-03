@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ services/lorri.nix ];
+  imports = [ services/lorri.nix dev/fsharp.nix];
 
   environment.systemPackages = with pkgs; [
     # AWS
