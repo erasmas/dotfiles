@@ -41,8 +41,8 @@
 
     # web
     networkmanager-openvpn
-    thunderbird
-    fractal # Matrix client
+    # thunderbird
+    # fractal # Matrix client
 
     # network
     mitmproxy
