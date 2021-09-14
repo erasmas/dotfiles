@@ -22,7 +22,7 @@
 
 ;; Projectile
 (setq projectile-project-search-path '("~/Work/Attendify" "~/Dev"))
-(setq projectile-auto-discover nil)
+(setq projectile-auto-discover 't)
 
 ;; Org Mode
 

@@ -1,10 +1,9 @@
 [user]
-  name = Ivan Kryvoruchko
-  mail = gsnewmark@pm.me
-  email = gsnewmark@pm.me
-  signingkey = 41EF9C7DEE72758A
+  name = Dmytro Morozov
+  mail = mail@dmorozov.info
+  email = mail@dmorozov.info
 [github]
-  user = gsnewmark
+  user = erasmas
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
@@ -12,8 +11,12 @@
   ui = true
 [push]
   default = simple
-[commit]
-  template = /home/gsnewmark/.git_commit_msg
-  gpgsign = true
 [magit]
   hideCampaign = true
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  unstage = reset HEAD --
+  last = log -1 HEAD

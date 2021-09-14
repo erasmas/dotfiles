@@ -21,7 +21,6 @@
 
     # screen recorders
     flameshot
-    peek
 
     # video player
     ffmpeg
@@ -68,6 +67,8 @@
   ];
 
   networking.networkmanager.enable = true;
+  networking.firewall.enable = true;
+
   users.users.erasmas.extraGroups = [ "networkmanager" ];
 
   sound.enable = true;

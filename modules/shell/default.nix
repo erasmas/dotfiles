@@ -5,6 +5,7 @@
     bat
     bandwhich
     curl
+    dogdns
     du-dust
     exa
     fd

@@ -68,6 +68,7 @@
         +offline)
        magit             ; a git porcelain for Emacs
        lsp
+       terraform
 
        :os
        tty               ; improve the terminal Emacs experience

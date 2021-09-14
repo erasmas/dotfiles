@@ -38,11 +38,16 @@
     rlwrap
     shellcheck
     pv
-    rclone # for Google Drive
 
     # Postgres
     pgcli
 
     gitAndTools.tig
+
+    # DevOps
+    aws-mfa
+    chamber
+    terraform_0_13
+    terraform-landscape
   ];
 }

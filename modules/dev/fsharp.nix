@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    dotnet-sdk_5
+    unstable.dotnet-sdk_5
+    unstable.jetbrains.rider
     pkgs.nodejs
     openssl
   ];
