@@ -10,6 +10,10 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 
+" NERDTree (File Explorer)
+set NERDTree
+map <C-o> :NERDTreeToggle<CR>
+
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
 
@@ -24,7 +28,20 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-""" Mappings --------------------------------
+" Allow using the system clipboard from IdeaVim and vice-versa
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+" Shortcut to edit and reload this config
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Distraction free mode
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+"" Mappings --------------------------------
+nnoremap <leader><leader> :action GotoFile<CR>
+
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)
 
@@ -36,7 +53,26 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>s <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-map <S-Space> <Action>(GotoNextError)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
 
-map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>o <Action>(FileStructurePopup)
+" Window management
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wq <Action>(Unsplit)
+map <leader>wl <Action>(NextSplitter)
+map <leader>wh <Action>(PrevSplitter)
+map <leader>pp <Action>(ManageRecentProjects)
+
+" Tool Windows
+map <leader>tq <Action>(CloseActiveTab)
+
+" FSharp
+map <leader>fsi <Action>(Rider.Plugins.FSharp.StartFsi)
+map <leader>fse <Action>(Rider.Plugins.FSharp.SendToFsi)
+
+" Git
+map <leader>gc <Action>(CheckinProject)
+
+" IDE
+map <C-,> <Action>(ShowSettings)
