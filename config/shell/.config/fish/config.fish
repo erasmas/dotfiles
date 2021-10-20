@@ -16,14 +16,14 @@ alias e $TE
 
 # shortcut for terminal emacs with sudo
 alias E "env SUDO_EDITOR=\"emacs -nw\" sudoedit"
-
 alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
-
 alias stream-mpd "mpv -idle --cache=no http://localhost:8000"
-
 alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
+## Work tools
 alias tf "terraform"
+alias k "kubectl"
+set -gx KUBECONFIG $HOME/.kube/config
 
 ## vi mode
 
