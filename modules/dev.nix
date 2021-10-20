@@ -10,6 +10,7 @@
     # Clojure
     clojure
     leiningen
+    clojure-lsp
 
     # Haskell
     stack
@@ -28,12 +29,7 @@
     python3Packages.virtualenvwrapper
     tk
 
-    # Scala
-    sbt
-
     # Common libraries & tools
-    clang
-    gdb
     openssl
     rlwrap
     shellcheck
