@@ -40,7 +40,8 @@ nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
 "" Mappings --------------------------------
-nnoremap <leader><leader> :action GotoFile<CR>
+nnoremap <leader><leader> :action SearchEverywhere<CR>
+map <leader>< <Action>(RecentFiles)
 
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)

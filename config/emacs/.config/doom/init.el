@@ -92,7 +92,7 @@
         +present         ; Emacs for presentations
         +roam)
        python            ; beautiful is better than ugly
-       ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       (rust +lsp)
        ;; scala             ; java, but good
        ;; (fsharp +lsp)
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor

@@ -3,6 +3,14 @@
 {
   imports = [ services/lorri.nix dev/fsharp.nix];
 
+  # Nix Flakes
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+        experimental-features = nix-command flakes
+    '';
+  };
+
   environment.systemPackages = with pkgs; [
     # AWS
     awscli
@@ -16,9 +24,10 @@
     stack
 
     # Java
-    jdk11
+    jdk # JDK 17
     maven
     visualvm
+    jetbrains.idea-community
 
     # Python
     python3
@@ -28,6 +37,9 @@
     python3Packages.virtualenv
     python3Packages.virtualenvwrapper
     tk
+
+    # Rust
+    rustup
 
     # Common libraries & tools
     openssl

@@ -4,10 +4,10 @@
 
 ;; UI
 
-(setq doom-theme 'doom-nord-light)
+(setq doom-theme 'tsdh-dark)
 
 (setq doom-font (font-spec :family "Iosevka" :size 14.0)
-      doom-variable-pitch-font (font-spec :family "Source Sans Pro"))
+      doom-variable-pitch-font (font-spec :family "Source Sans 3"))
 
 (setq which-key-idle-delay 0.4)
 

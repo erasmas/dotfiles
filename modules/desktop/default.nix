@@ -50,7 +50,6 @@
 
     # encryption
     truecrypt
-    keepassxc
 
     ranger
     atool
@@ -107,7 +106,7 @@
       source-han-sans-korean
       source-han-sans-simplified-chinese
       source-han-sans-traditional-chinese
-      source-sans-pro
+      source-sans
       source-serif-pro
       symbola
       veracrypt

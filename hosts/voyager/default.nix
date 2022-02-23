@@ -18,7 +18,6 @@
     ../../modules/editors/emacs.nix
     ../../modules/editors/vim.nix
     ../../modules/editors/vscode.nix
-    # ../../modules/gaming.nix
     # ../../modules/graphics.nix
     ../../modules/music.nix
     ../../modules/recording.nix
