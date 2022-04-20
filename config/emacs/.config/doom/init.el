@@ -74,17 +74,18 @@
        tty               ; improve the terminal Emacs experience
 
        :lang
+       ;; (elixir :lsp)
        (clojure          ; java with a lisp
         ;; +lsp
         +syntax-checker)
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
-       go                ; the hipster dialect
+       ;; go                ; the hipster dialect
        (haskell +lsp)    ; a language that's lazier than I am
        json              ; At least it ain't XML
-       (java +meghanada) ; the poster child for carpal tunnel syndrome
+       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       kotlin            ; a better, slicker Java(Script)
+       ;; kotlin            ; a better, slicker Java(Script)
        markdown          ; writing docs for people to ignore
        nix               ; I hereby declare "nix geht mehr!"
        (org              ; organize your plain life in plain text
@@ -94,7 +95,7 @@
        python            ; beautiful is better than ugly
        (rust +lsp)
        ;; scala             ; java, but good
-       ;; (fsharp +lsp)
+       (fsharp +lsp)
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        web               ; the tubes
        yaml              ; JSON, but readable

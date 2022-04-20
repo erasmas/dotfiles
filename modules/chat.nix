@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     discord
     slack
-    tdesktop
+    unstable.tdesktop
+    signal-desktop
   ];
 }

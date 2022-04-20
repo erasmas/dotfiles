@@ -2,14 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    unstable.dotnet-sdk_5
+    # unstable.dotnet-sdk
     unstable.jetbrains.rider
-    pkgs.nodejs
-    openssl
   ];
 
-  environment.sessionVariables = with pkgs; {
-    DOTNET_ROOT="${dotnet-sdk_5}";
-    DOTNET_CLI_TELEMETRY_OPTOUT="1";
-  };
+  # environment.sessionVariables = with pkgs; {
+  #   DOTNET_ROOT="${dotnet-sdk}";
+  #   DOTNET_CLI_TELEMETRY_OPTOUT="1";
+  # };
 }

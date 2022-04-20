@@ -13,12 +13,10 @@
     # Applications
     ../../modules/browser.nix
     ../../modules/chat.nix
-    # ../../modules/daw.nix
     ../../modules/dev.nix
     ../../modules/editors/emacs.nix
     ../../modules/editors/vim.nix
     ../../modules/editors/vscode.nix
-    # ../../modules/graphics.nix
     ../../modules/music.nix
     ../../modules/recording.nix
     ../../modules/shell/fish.nix

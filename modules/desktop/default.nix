@@ -50,6 +50,7 @@
 
     # encryption
     truecrypt
+    unstable._1password-gui
 
     ranger
     atool

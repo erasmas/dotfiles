@@ -23,6 +23,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.system-monitor
+    gnomeExtensions.unite
     gnome.gnome-tweaks
     libnotify
     notify-desktop

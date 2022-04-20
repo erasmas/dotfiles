@@ -4,7 +4,7 @@
 
 ;; UI
 
-(setq doom-theme 'tsdh-dark)
+(setq doom-theme 'doom-ephemeral)
 
 (setq doom-font (font-spec :family "Iosevka" :size 14.0)
       doom-variable-pitch-font (font-spec :family "Source Sans 3"))
@@ -21,7 +21,7 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; Projectile
-(setq projectile-project-search-path '("~/Work/Attendify" "~/Dev"))
+(setq projectile-project-search-path '("~/Work/Hopin" "~/Dev"))
 (setq projectile-auto-discover 't)
 
 ;; Org Mode
