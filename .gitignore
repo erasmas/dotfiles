@@ -12,4 +12,4 @@ config/music/.config/mpd/mpdstate
 config/music/.config/mpd/playlists/*
 config/music/.ncmpcpp/error.log
 config/music/.ncmpcpp/artists/*
-config/nvim/plugin/packer_compiled.lua
+config/nvim/.config/nvim/plugin/packer_compiled.lua
