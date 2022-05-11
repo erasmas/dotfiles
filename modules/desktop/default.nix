@@ -29,7 +29,6 @@
     youtube-dl
 
     # document viewers
-    calibre
     gnome.eog
     libreoffice-still
     zathura
@@ -40,8 +39,6 @@
 
     # web
     networkmanager-openvpn
-    # thunderbird
-    # fractal # Matrix client
 
     # network
     mitmproxy
@@ -63,6 +60,8 @@
     
     # Clipboard manager
     haskellPackages.greenclip
+    xclip
+    wl-clipboard
 
   ];
 
