@@ -5,4 +5,4 @@
 -- See: https://github.com/brainfucksec/neovim-lua#appearance
 
 -- Load nvim color scheme:
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme duskfox")

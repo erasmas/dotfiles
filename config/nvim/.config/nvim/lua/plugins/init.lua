@@ -71,7 +71,12 @@ return packer.startup(function(use)
   use 'EdenEast/nightfox.nvim'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
+  use {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require('config.lsp').setup()
+    end,
+  }
 
   -- Autocomplete
   use {
