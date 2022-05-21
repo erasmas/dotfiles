@@ -2,7 +2,6 @@
 
 set -gx TERM xterm-256color
 
-set -gx PATH ~/bin ~/.cargo/bin $PATH
 
 set -L TE "nvim"
 set -gx VISUAL $TE
@@ -51,6 +50,17 @@ set fish_greeting
 set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
 set pure_user_host_location 1
+
+# ---------------------------------------------------------
+# PATH
+# ---------------------------------------------------------
+if test $HOME/.krew/bin
+  set -gx PATH $PATH $HOME/.krew/bin
+end
+
+if test $HOME/.cargo/bin
+  set -gx PATH ~/bin ~/.cargo/bin $PATH
+end
 
 # ---------------------------------------------------------
 # MacOS
