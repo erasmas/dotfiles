@@ -32,7 +32,7 @@
   fonts = with pkgs; {
     fontDir.enable = true;
     fonts = [
-	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+      (nerdfonts.override { fonts = [ "Iosevka" ]; })
     ];
   };
 
