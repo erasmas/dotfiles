@@ -23,10 +23,12 @@ function M.setup()
     ["w"] = { "<cmd>update!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
 
+    [" "] = { "<cmd>Telescope find_files hidden=true<cr>", "Find File" },
+
     f = {
       name = "file",
       b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-      f = { "<cmd>Telescope find_files<cr>", "Find File" },
+      f = { "<cmd>Telescope find_files hidden=true<cr>", "Find File" },
       g = { "<cmd>Telescope live_grep<cr>", "Find string in files" },
       r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
       n = { "New File" }, -- just a label. don't create any mapping
