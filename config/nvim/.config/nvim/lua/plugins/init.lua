@@ -65,13 +65,17 @@ return packer.startup(function(use)
   -- use 'preservim/tagbar'
 
   -- Treesitter interface
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
 
   -- Color schemes
   use 'EdenEast/nightfox.nvim'
 
   -- LSP
   use {
+
     'neovim/nvim-lspconfig',
     config = function()
       require('config.lsp').setup()
@@ -82,18 +86,17 @@ return packer.startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'saadparwaiz1/cmp_luasnip',
+      'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for nvim-lsp
+      'onsails/lspkind.nvim', -- pictograms for nvim-lsp
+      'hrsh7th/cmp-buffer',   -- nvim-cmp support for buffer words
+      'hrsh7th/cmp-path',     --nvim-cmp support for fs paths
+      'hrsh7th/cmp-cmdline',  --nvim-cmp support for vim's cmdline
+      'dcampos/cmp-snippy',   -- snippy integration for nvim-cmp
+      'dcampos/nvim-snippy',  -- snippy
     },
-  }
-
-  -- Statusline
-  use {
-    'famiu/feline.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require('config.cmp').setup()
+    end,
   }
 
   -- git labels
@@ -127,6 +130,42 @@ return packer.startup(function(use)
 
   -- Neogit
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+  -- Status Line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = function()
+      require('lualine').setup()
+    end
+  }
+
+
+  use {
+    'echasnovski/mini.nvim',
+    branch = 'stable',
+    config = function()
+      -- Surround
+      require('mini.surround').setup {
+        mappings = {
+          add = 'ca', -- Add surrounding
+          delete = 'cd', -- Delete surrounding
+          replace = 'cs', -- Replace surrounding
+        },
+      }
+      -- Trailing Whitespace
+      require('mini.trailspace').setup {
+        trim = true
+      }
+      -- Comments
+      require('mini.comment').setup {
+        mappings = {
+          comment = '<leader>c',
+          comment_line = '<leader>cc'
+        }
+      }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
