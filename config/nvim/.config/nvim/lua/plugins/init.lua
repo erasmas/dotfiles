@@ -125,7 +125,16 @@ return packer.startup(function(use)
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('telescope').setup {
+          pickers = {
+            find_files = {
+              find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "--hidden" }
+            },
+          }
+      }
+    end
   }
 
   -- Neogit
