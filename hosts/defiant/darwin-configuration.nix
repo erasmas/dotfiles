@@ -13,10 +13,11 @@
     neovim
     ripgrep
     stow
+    tig
     tmux
     zoxide
 
-    # Hopin
+    # Work
     aws-mfa
     chamber
     docker
@@ -39,5 +40,7 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
+  
+  networking.hostName = "defiant";
 
 }
