@@ -46,7 +46,6 @@
     wireshark
 
     # encryption
-    truecrypt
     unstable._1password-gui
 
     ranger
@@ -75,7 +74,6 @@
   hardware.pulseaudio = {
     enable = true;
     package = pkgs.pulseaudioFull;
-    extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
 
   hardware.bluetooth = {
@@ -109,7 +107,6 @@
       source-sans
       source-serif-pro
       symbola
-      veracrypt
       ubuntu_font_family
     ];
 
