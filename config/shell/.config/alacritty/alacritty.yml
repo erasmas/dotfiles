@@ -7,7 +7,7 @@ scrolling:
 font:
   size: 16
   normal:
-    family: Iosevka Nerd Font Mono
+    family: Iosevka
     style: Regular
 
   bold:
