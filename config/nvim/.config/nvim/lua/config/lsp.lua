@@ -46,6 +46,14 @@ function M.setup()
       }
     }
   end
+
+  vim.diagnostic.config {
+    -- Disable inlined diagnostic messages
+    virtual_text = false,
+    underline = false,
+    signs = true,
+  }
+
 end
 
 return M
