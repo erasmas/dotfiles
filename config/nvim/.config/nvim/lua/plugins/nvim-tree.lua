@@ -13,21 +13,6 @@
 -- Default options ARE NOT included.
 -- See: `:help NvimTree`
 
-
--- Global options
-local g = vim.g
-
-g.nvim_tree_highlight_opened_files = 1
-g.nvim_tree_git_hl = 1
-g.nvim_tree_respect_buf_cwd = 1
-g.nvim_tree_width_allow_resize  = 1
-g.nvim_tree_icons = { default = "" }
-g.nvim_tree_show_icons = {
-  git = 1,
-  folders = 1,
-  files = 1,
-}
-
 local status_ok, nvim_tree = pcall(require, 'nvim-tree')
 if not status_ok then
   return
@@ -36,12 +21,15 @@ end
 -- Call setup:
 --- Each of these are documented in `:help nvim-tree.OPTION_NAME`
 nvim_tree.setup {
+  respect_buf_cwd = true,
   open_on_setup = false,
   open_on_setup_file = false,
   open_on_tab = false,
   update_cwd = true,
   view = { width = 32 },
   renderer = {
+    highlight_opened_files = "none",
+    highlight_git = true,
     indent_markers = {
       enable = false,
       icons = {
