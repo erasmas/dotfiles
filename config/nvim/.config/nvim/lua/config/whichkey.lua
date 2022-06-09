@@ -59,6 +59,14 @@ function M.setup()
     t = {
       name = "Tree",
       t = { "<cmd>NvimTreeToggle<cr>", "Toggle" }
+    },
+
+    x = {
+      name = "Trouble",
+      x = { "<cmd>TroubleToggle<cr>", "TroubleToggle" },
+      w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble workspace_diagnostics" },
+      d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble document_diagnostics" },
+      q = { "<cmd>TroubleToggle quickfix<cr>", "Trouble quickfix" },
     }
   }
 
