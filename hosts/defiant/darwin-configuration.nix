@@ -4,24 +4,22 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    aws-mfa
     bat
     direnv
     fd
     fish
     htop
     jq
+    k9s
     neovim
+    ranger
     ripgrep
     stow
     tig
+    timg
     tmux
     zoxide
-
-    # Work
-    aws-mfa
-    chamber
-    docker
-    docker-compose
   ];
 
   services.nix-daemon.enable = true;

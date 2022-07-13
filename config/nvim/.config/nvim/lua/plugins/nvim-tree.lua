@@ -26,7 +26,7 @@ nvim_tree.setup {
   open_on_setup_file = false,
   open_on_tab = false,
   update_cwd = true,
-  view = { width = 32 },
+  view = { width = 40 },
   renderer = {
     highlight_opened_files = "none",
     highlight_git = true,

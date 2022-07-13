@@ -15,7 +15,7 @@ opt.expandtab 	= true  -- Use spaces instead of tabs
 opt.hlsearch = true -- Set highlight on search
 opt.ignorecase = true -- Case insensitive searching unless /C or capital in search
 opt.mouse = "a" -- Enable mouse mode
-opt.number = false -- Make line numbers default
+opt.number = true -- Make line numbers default
 opt.relativenumber = false -- Make relative number default
 opt.shiftwidth  = 2     -- spaces for tabs when autoindent
 opt.signcolumn = "yes" -- Always show sign column
@@ -49,3 +49,4 @@ vim.cmd [[
   augroup end
 ]]
 
+vim.o.shell = '/bin/bash'
