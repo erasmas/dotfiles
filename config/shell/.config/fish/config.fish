@@ -54,10 +54,6 @@ set pure_user_host_location 1
 # ---------------------------------------------------------
 # PATH
 # ---------------------------------------------------------
-if test $HOME/.krew/bin
-  set -gx PATH $PATH $HOME/.krew/bin
-end
-
 if test $HOME/.cargo/bin
   set -gx PATH ~/bin ~/.cargo/bin $PATH
 end
