@@ -10,7 +10,7 @@ function M.setup()
   local lspkind = require('lspkind')
   local snippy = require("snippy")
   local cmp = require 'cmp'
-  
+
   cmp.setup({
     formatting = {
       format = lspkind.cmp_format({
@@ -39,7 +39,7 @@ function M.setup()
           fallback()
         end
       end, { "i", "s" }),
-  
+
       ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_prev_item()
