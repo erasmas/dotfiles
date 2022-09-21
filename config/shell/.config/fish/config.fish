@@ -58,9 +58,12 @@ if test $HOME/.cargo/bin
   set -gx PATH ~/bin ~/.cargo/bin $PATH
 end
 
-# ---------------------------------------------------------
-# MacOS
-# ---------------------------------------------------------
-if test -d /opt/homebrew
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-end
+# Set JAVA_HOME on MacOS with nix-darwin
+# if type -q java and type -q nix-store
+#   set -gx JAVA_HOME (nix-store -q $(which java))
+# end
+
+alias nixre  "darwin-rebuild switch"
+alias nixgc  "nix-collect-garbage -d"
+alias nixq   "nix-env -qaP"
+alias nixcfg "e ~/.nixpkgs/darwin-configuration.nix"

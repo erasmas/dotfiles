@@ -6,17 +6,22 @@
   environment.systemPackages = with pkgs; [
     aws-mfa
     bat
+    dbeaver
     direnv
     fd
     fish
     fzf
+    helix
     htop
+    httpie
     jdk
     jq
     k9s
     neovim
     ranger
     ripgrep
+    rustup
+    rust-analyzer
     stow
     tig
     timg
@@ -34,11 +39,12 @@
     for p in /run/current-system/sw/bin
       if not contains $p $fish_user_paths
         set -g fish_user_paths $p $fish_user_paths
+        set -g JAVA_HOME $pkgs.jdk
       end
     end
   '';
 
-  environment.shells = with pkgs; [ bashInteractive fish zsh ];
+  environment.shells = with pkgs; [ fish ];
 
   fonts = with pkgs; {
     fontDir.enable = true;
