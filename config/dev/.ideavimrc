@@ -12,7 +12,7 @@ set ReplaceWithRegister
 
 " NERDTree (File Explorer)
 set NERDTree
-map <C-o> :NERDTreeToggle<CR>
+map <leader>t :NERDTreeToggle<CR>
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -77,3 +77,4 @@ map <leader>gc <Action>(CheckinProject)
 
 " IDE
 map <C-,> <Action>(ShowSettings)
+
