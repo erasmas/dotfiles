@@ -5,10 +5,19 @@ scrolling:
   history: 99999
 
 font:
-  size: 12
+  size: 16
   normal:
-    family: Iosevka Nerd Font
+    family: Iosevka
     style: Regular
+
+  bold:
+    style: Bold
+
+  italic:
+    style: Italic
+
+  bold_italic:
+    style: Bold Italic
 
 cursor:
   vi_mode_style: Underline
