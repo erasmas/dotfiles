@@ -1,6 +1,6 @@
 # voyager - my ThinkPad laptop
 
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -11,20 +11,22 @@
     ../../modules/desktop/gnome.nix
 
     # Applications
-    ../../modules/browser.nix
-    ../../modules/chat.nix
     ../../modules/dev.nix
-    ../../modules/editors/emacs.nix
+    ../../modules/browser.nix
     ../../modules/editors/vim.nix
-    ../../modules/editors/vscode.nix
-    ../../modules/music.nix
-    ../../modules/recording.nix
     ../../modules/shell/fish.nix
     ../../modules/vm.nix
 
     # Additional services
     ../../modules/services/fwupd.nix
     ../../modules/services/syncthing.nix
+    ../../modules/services/tailscale.nix
+    ../../modules/services/nextcloud.nix
+
+
+    # Disabled modules
+    # ../../modules/chat.nix
+    # ../../modules/recording.nix
   ];
 
   networking.hostName = "voyager";
@@ -70,4 +72,21 @@
 
   # Monitor backlight control
   programs.light.enable = true;
+
+  networking.firewall = {
+    # enable the firewall
+    enable = true;
+
+    # always allow traffic from your Tailscale network
+    trustedInterfaces = [ "tailscale0" ];
+
+    # allow the Tailscale UDP port through the firewall
+    allowedUDPPorts = [ config.services.tailscale.port ];
+
+    # allow you to SSH in over the public internet
+    allowedTCPPorts = [ 22 ];
+
+    checkReversePath =  "loose";
+  };
+
 }

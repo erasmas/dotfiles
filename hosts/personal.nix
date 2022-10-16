@@ -11,8 +11,6 @@
   nix = {
     nixPath = options.nix.nixPath.default
       ++ [ "config=/etc/dotfiles/config" "packages=/etc/dotfiles/packages" ];
-    autoOptimiseStore = true;
-    trustedUsers = [ "root" "@wheel" ];
   };
   nixpkgs.config = {
     allowUnfree = true;
@@ -23,12 +21,6 @@
       my = { };
     };
   };
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url =
-        "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-    }))
-  ];
 
   boot.cleanTmpDir = true;
   boot.loader.systemd-boot.enable = true;

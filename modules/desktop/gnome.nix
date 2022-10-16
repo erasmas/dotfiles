@@ -27,7 +27,6 @@
     gnome.gnome-tweaks
     libnotify
     notify-desktop
-    pinentry_gnome
   ];
 
   programs.gnupg.agent = {

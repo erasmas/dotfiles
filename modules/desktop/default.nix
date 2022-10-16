@@ -5,7 +5,6 @@
 
   environment.systemPackages = with pkgs; [
     # additional sound settings
-    alsaUtils
     pavucontrol
 
     # UI theme & icons
@@ -24,9 +23,7 @@
 
     # video player
     ffmpeg
-    mpv
     vlc
-    youtube-dl
 
     # document viewers
     gnome.eog
@@ -43,10 +40,6 @@
     # network
     mitmproxy
     nmap
-    wireshark
-
-    # encryption
-    unstable._1password-gui
 
     ranger
     atool
@@ -61,11 +54,9 @@
     haskellPackages.greenclip
     xclip
     wl-clipboard
-
   ];
 
   networking.networkmanager.enable = true;
-  networking.firewall.enable = true;
 
   users.users.erasmas.extraGroups = [ "networkmanager" ];
 
@@ -100,17 +91,12 @@
       font-awesome
       iosevka
       noto-fonts-emoji
-      source-han-sans-japanese
-      source-han-sans-korean
-      source-han-sans-simplified-chinese
-      source-han-sans-traditional-chinese
       source-sans
       source-serif-pro
       symbola
       ubuntu_font_family
     ];
 
-    # TODO just use the dotfile
     fontconfig = {
       enable = true;
       hinting = {
