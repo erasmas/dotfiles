@@ -11,6 +11,7 @@
   ui = true
 [push]
   default = simple
+	autoSetupRemote = true
 [magit]
   hideCampaign = true
 [alias]

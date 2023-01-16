@@ -59,9 +59,9 @@ if test $HOME/.cargo/bin
 end
 
 # Set JAVA_HOME on MacOS with nix-darwin
-# if type -q java and type -q nix-store
-#   set -gx JAVA_HOME (nix-store -q $(which java))
-# end
+if type -q java and type -q nix-store
+  set -gx JAVA_HOME (nix-store -q $(which java))
+end
 
 alias nixre  "darwin-rebuild switch"
 alias nixgc  "nix-collect-garbage -d"

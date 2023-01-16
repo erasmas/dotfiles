@@ -14,9 +14,8 @@
     helix
     htop
     httpie
-    jdk
+    jdk17
     jq
-    k9s
     neovim
     ranger
     ripgrep
@@ -24,9 +23,11 @@
     rust-analyzer
     stow
     tig
-    timg
     tmux
     zoxide
+
+    # Python
+    # pyright
   ];
 
   services.nix-daemon.enable = true;
@@ -39,7 +40,6 @@
     for p in /run/current-system/sw/bin
       if not contains $p $fish_user_paths
         set -g fish_user_paths $p $fish_user_paths
-        set -g JAVA_HOME $pkgs.jdk
       end
     end
   '';
