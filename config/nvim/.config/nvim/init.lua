@@ -60,6 +60,10 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+  -- Editing
+  use 'windwp/nvim-autopairs'
+  use 'echasnovski/mini.nvim'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -380,6 +384,24 @@ mason_lspconfig.setup_handlers {
 
 -- Turn on lsp status information
 require('fidget').setup()
+
+-- Enable autopairs
+require("nvim-autopairs").setup()
+
+-- Enable surrounding
+require('mini.surround').setup {
+  mappings = {
+    add = 'ca', -- Add surrounding
+    delete = 'cd', -- Delete surrounding
+    replace = 'cs', -- Replace surrounding
+  },
+}
+
+-- Trim trailing whitespace
+require('mini.trailspace').setup {
+  trim = true
+}
+
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
