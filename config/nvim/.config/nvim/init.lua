@@ -64,6 +64,9 @@ require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'echasnovski/mini.nvim'
 
+  -- Generate shareable file permalinks (with line ranges) for git web frontend hosts
+  use { 'ruifm/gitlinker.nvim', requires = 'nvim-lua/plenary.nvim' }
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -128,6 +131,9 @@ vim.cmd [[colorscheme onedark]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- Enable yanking to system buffer
+vim.api.nvim_set_option('clipboard', "unnamedplus")
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -449,3 +455,5 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- Enable gitlinker.nvim
+require('gitlinker').setup()
