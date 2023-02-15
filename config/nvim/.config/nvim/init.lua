@@ -47,6 +47,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
