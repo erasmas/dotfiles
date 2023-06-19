@@ -10,10 +10,26 @@ set -gx EDITOR $TE
 ## Aliases
 alias e $TE
 
-# shortcut for terminal emacs with sudo
-alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
-alias stream-mpd "mpv -idle --cache=no http://localhost:8000"
-alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
+# Git
+alias ga "git add"
+alias gc "git commit"
+alias gp "git push"
+alias gl "git log"
+alias gs "git status"
+alias gb "git branch"
+alias gd "git diff"
+alias gco "git checkout"
+alias gcb "git checkout -b"
+
+# Nix
+alias nixre  "darwin-rebuild switch"
+alias nixgc  "nix-collect-garbage -d"
+alias nixq   "nix-env -qaP"
+alias nixcfg "e ~/.nixpkgs/darwin-configuration.nix"
+
+# Docker
+alias dcu "docker-compose up"
+alias dcd "docker-compose down"
 
 ## Work tools
 alias tf "terraform"
@@ -63,7 +79,3 @@ if type -q java and type -q nix-store
   set -gx JAVA_HOME (nix-store -q $(which java))
 end
 
-alias nixre  "darwin-rebuild switch"
-alias nixgc  "nix-collect-garbage -d"
-alias nixq   "nix-env -qaP"
-alias nixcfg "e ~/.nixpkgs/darwin-configuration.nix"
