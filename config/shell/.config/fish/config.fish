@@ -9,6 +9,7 @@ set -gx EDITOR $TE
 
 ## Aliases
 alias e $TE
+alias js "joshuto"
 
 # Git
 alias ga "git add"
@@ -34,6 +35,8 @@ alias dcd "docker-compose down"
 ## Work tools
 alias tf "terraform"
 alias k "kubectl"
+alias gw "./gradlew"
+
 set -gx KUBECONFIG $HOME/.kube/config
 
 ## vi mode

@@ -7,6 +7,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
+  pager = delta
 [color]
   ui = true
 [push]
@@ -21,5 +22,16 @@
   st = status
   unstage = reset HEAD --
   last = log -1 HEAD
+	yolo = !git add -A && git commit -m \"$(curl --silent --fail https://whatthecommit.com/index.txt)\"
 [init]
 	defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	side-by-side = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
