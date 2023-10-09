@@ -12,10 +12,10 @@
     delta
     direnv
     elixir
-    exa
     fd
     fish
     fzf
+    helix
     htop
     httpie
     jdk17
