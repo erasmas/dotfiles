@@ -2,8 +2,9 @@ config/desktop/.config/gtk-3.0/bookmarks
 config/desktop/.config/ranger/bookmarks
 config/desktop/.config/ranger/history
 config/desktop/.config/ranger/tagged
+config/shell/.config/fish/functions/asana-md-url.fish
+config/shell/.config/fish/functions/fish_prompt.fish
 config/shell/.config/fish/conf.d
-config/shell/.config/fish/functions
 config/shell/.config/fish/fish_variables
 config/music/.config/mpd/mpd.db
 config/music/.config/mpd/mpd.log*
