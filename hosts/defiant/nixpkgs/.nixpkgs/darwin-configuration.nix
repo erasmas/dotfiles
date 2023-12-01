@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -11,19 +12,22 @@
     coreutils
     delta
     direnv
-    elixir
+    elixir_1_15
+    erlang
     fd
     fish
     fzf
     helix
     htop
     httpie
+    gh
     jdk17
     joshuto
     jq
     lazydocker
     lazygit
     neovim
+    ngrok
     niv
     nodejs-18_x
     pandoc
@@ -32,9 +36,9 @@
     rustup
     stow
     tig
-    tmux
     watch
     wget
+    zellij
     zoxide
   ];
 
