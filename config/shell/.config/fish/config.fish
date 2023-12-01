@@ -10,6 +10,7 @@ set -gx EDITOR $TE
 ## Aliases
 alias e $TE
 alias js "joshuto"
+alias tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # Git
 alias ga "git add"
@@ -70,6 +71,12 @@ set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
 set pure_user_host_location 1
 
+## Zellij
+if status is-interactive
+    set ZELLIJ_AUTO_ATTACH 1
+    eval (zellij setup --generate-auto-start fish | string collect)
+end
+
 # ---------------------------------------------------------
 # PATH
 # ---------------------------------------------------------
@@ -81,4 +88,17 @@ end
 if type -q java and type -q nix-store
   set -gx JAVA_HOME (nix-store -q $(which java))
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /Users/erasmas/miniconda3/bin/conda
+    eval /Users/erasmas/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/Users/erasmas/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/erasmas/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/Users/erasmas/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
 
