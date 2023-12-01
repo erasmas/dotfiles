@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-rsync -av --no-compress --progress --delete --include-from="/home/$(whoami)/bin/backup-include" --exclude-from="/home/$(whoami)/bin/backup-exclude" ~/ "/mnt/veracrypt1/$(hostname)"
