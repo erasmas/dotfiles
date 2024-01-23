@@ -37,8 +37,8 @@
     stow
     tig
     watch
+    wezterm
     wget
-    zellij
     zoxide
   ];
 

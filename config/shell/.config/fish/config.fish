@@ -63,6 +63,8 @@ direnv hook fish | source
 ## zoxide integration
 zoxide init fish --cmd g | source
 
+source ~/.config/fish/draftwise.fish
+
 
 ## Prompt
 
@@ -70,12 +72,6 @@ set fish_greeting
 set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
 set pure_user_host_location 1
-
-## Zellij
-if status is-interactive
-    set ZELLIJ_AUTO_ATTACH 1
-    eval (zellij setup --generate-auto-start fish | string collect)
-end
 
 # ---------------------------------------------------------
 # PATH
