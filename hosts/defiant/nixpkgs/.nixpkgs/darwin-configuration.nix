@@ -5,45 +5,35 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    (import (fetchTarball https://install.devenv.sh/latest)).default
     awscli2
     aws-mfa
     bat
     coreutils
     delta
+    devenv
     direnv
-    elixir_1_15
-    erlang
     fd
     fish
     fzf
-    helix
     htop
     httpie
-    gh
-    jdk17
-    joshuto
+    jdk21
     jq
     lazydocker
     lazygit
     neovim
-    ngrok
-    niv
     nodejs-18_x
     pandoc
     postgresql
     ripgrep
-    rustup
     stow
     tig
     watch
-    wezterm
     wget
     zoxide
   ];
 
   services.nix-daemon.enable = true;
-  services.lorri.enable = true;
 
   programs.fish.enable = true;
 
